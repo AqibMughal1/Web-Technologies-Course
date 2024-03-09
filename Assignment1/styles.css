@@ -6,6 +6,8 @@ body {
 
 :root {
   --opensans: "Open Sans", sans-serif;
+  --headings: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 nav {
   background-color: hsl(179, 47%, 45%);
@@ -17,6 +19,7 @@ nav {
   margin: auto;
   display: flex;
   padding: 50px;
+  background-color: beige;
 }
 
 .leftcol {
@@ -25,6 +28,7 @@ nav {
 
 .rightcol {
   width: 60%;
+  border-left: 2px solid grey;
 }
 
 .img-container {
@@ -39,8 +43,11 @@ img {
   border-radius: 100%;
 }
 
+.links{
+    padding-top: 20px;
+}
 .leftcol p i {
-  padding-right: 5px;
+  padding-right: 15px;
 }
 
 .leftcol p {
@@ -53,4 +60,20 @@ img {
 .leftcol p a {
   text-decoration: none;
   color: black;
+}
+
+.education{
+    font-family: var(--opensans);
+}
+.education h1 , .skills h1 {
+    
+    font-family: var(--headings);
+    padding-top: 10px;
+}
+
+.education ul li{
+    padding-top: 10px;
+}
+.education ul li strong{
+    font-size: larger;
 }
