@@ -4,34 +4,53 @@ body {
   padding: 0;
 }
 
+:root {
+  --opensans: "Open Sans", sans-serif;
+}
 nav {
   background-color: hsl(179, 47%, 45%);
   padding: 15px;
-  text-align: center;
 }
 
 .container {
   width: 60%;
   margin: auto;
   display: flex;
+  padding: 50px;
 }
 
-.leftcol{
-    width: 40%;   
+.leftcol {
+  width: 40%;
 }
 
-.rightcol{
-    width: 60%;
+.rightcol {
+  width: 60%;
 }
 
 .img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
-    width: 200px;
-    height: auto;
-    border-radius: 100%;
+  width: 250px;
+  height: auto;
+  border-radius: 100%;
+}
+
+.leftcol p i {
+  padding-right: 5px;
+}
+
+.leftcol p {
+  font-size: small;
+  font-family: var(--opensans);
+  font-size: medium;
+  padding-left: 60px;
+}
+
+.leftcol p a {
+  text-decoration: none;
+  color: black;
 }
