@@ -65,13 +65,13 @@ img {
 .education{
     font-family: var(--opensans);
 }
-.education h1 , .skills h1 {
+.education h1 , .skills h1 , .interests h1{
     
     font-family: var(--headings);
     padding-top: 10px;
 }
 
-.education ul li{
+.education ul li, .skills ul li, .interests ul li{
     padding-top: 10px;
 }
 .education ul li strong{
