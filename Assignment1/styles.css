@@ -23,3 +23,15 @@ nav {
 .rightcol{
     width: 60%;
 }
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 100%;
+}
