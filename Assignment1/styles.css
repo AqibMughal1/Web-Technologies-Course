@@ -65,7 +65,7 @@ img {
 .education{
     font-family: var(--opensans);
 }
-.education h1 , .skills h1 , .interests h1{
+.education h1 , .skills h1 , .interests h1left{
     
     font-family: var(--headings);
     padding-top: 10px;
