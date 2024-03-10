@@ -7,7 +7,8 @@ body {
 
 :root {
   --opensans: "Open Sans", sans-serif;
-  --headings: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --headings: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   --color1: hsl(200, 21%, 62%);
 }
 nav {
@@ -45,8 +46,8 @@ img {
   border-radius: 100%;
 }
 
-.links{
-    padding-top: 20px;
+.links {
+  padding-top: 20px;
 }
 .leftcol p i {
   padding-right: 15px;
@@ -64,39 +65,69 @@ img {
   color: black;
 }
 
-.education{
-    font-family: var(--opensans);
+.education {
+  font-family: var(--opensans);
 }
-.education h1 , .skills h1 , .interests h1{
-    
-    font-family: var(--headings);
-    padding-top: 10px;
-}
-
-.education ul li, .skills ul li, .interests ul li{
-    padding-top: 10px;
-}
-.education ul li strong{
-    font-size: larger;
+.education h1,
+.skills h1,
+.interests h1,
+.about h1,
+.experience h1 {
+  font-family: var(--headings);
+  padding-top: 10px;
 }
 
-.title{
-    font-family: var(--headings);
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
+.education ul li,
+.skills ul li,
+.interests ul li {
+  padding-top: 10px;
+}
+.education ul li strong {
+  font-size: larger;
 }
 
-.title h1{
-    font-size: 3em;
-    letter-spacing: 4px;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    color: var(--color1)
+.title {
+  font-family: var(--headings);
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.title h3{
-    margin-top: 0%;
+.title h1 {
+  font-size: 3em;
+  letter-spacing: 4px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: var(--color1);
+}
+
+.title h3,
+.about h1 {
+  margin: 0%;
+}
+
+.about p {
+  font-family: var(--opensans);
+  text-align: justify;
+}
+
+.experience h1 {
+  margin-bottom: 0%;
+}
+.experience ul {
+  list-style-type: none;
+  text-decoration: none;
+  padding-left: 0;
+  margin-top: 0%;
+  font-family: var(--opensans);
+}
+
+.experience ul li {
+  padding-top: 20px;
+}
+.experience ul li h2,
+.experience ul li h3,
+.experience ul li p {
+  margin: 0;
 }
