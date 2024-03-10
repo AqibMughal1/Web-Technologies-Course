@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -7,10 +8,10 @@ body {
 :root {
   --opensans: "Open Sans", sans-serif;
   --headings: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  --color1: hsl(200, 21%, 62%);
 }
 nav {
-  background-color: hsl(179, 47%, 45%);
+  background-color: var(--color1);
   padding: 15px;
 }
 
@@ -29,6 +30,7 @@ nav {
 .rightcol {
   width: 60%;
   border-left: 2px solid grey;
+  padding-left: 50px;
 }
 
 .img-container {
@@ -65,7 +67,7 @@ img {
 .education{
     font-family: var(--opensans);
 }
-.education h1 , .skills h1 , .interests h1left{
+.education h1 , .skills h1 , .interests h1{
     
     font-family: var(--headings);
     padding-top: 10px;
@@ -76,4 +78,25 @@ img {
 }
 .education ul li strong{
     font-size: larger;
+}
+
+.title{
+    font-family: var(--headings);
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.title h1{
+    font-size: 3em;
+    letter-spacing: 4px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: var(--color1)
+}
+
+.title h3{
+    margin-top: 0%;
 }
