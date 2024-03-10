@@ -11,9 +11,15 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   --color1: hsl(200, 21%, 62%);
 }
+.nav-container {
+    width: 66%;
+    margin: auto;
+    position: relative;
+  }
 nav {
   background-color: var(--color1);
   padding: 15px;
+  top: 0; 
 }
 
 .container {
@@ -72,14 +78,14 @@ img {
 .skills h1,
 .interests h1,
 .about h1,
-.experience h1 {
+.experience h1, .certifications h1{
   font-family: var(--headings);
   padding-top: 10px;
 }
 
 .education ul li,
 .skills ul li,
-.interests ul li {
+.interests ul li , .certifications ul li{
   padding-top: 10px;
 }
 .education ul li strong {
@@ -131,3 +137,13 @@ img {
 .experience ul li p {
   margin: 0;
 }
+.certifications h1{
+    margin: 0;
+}
+
+.certifications ul {
+  padding-left: 15px;
+  margin-top: 0%;
+  font-family: var(--opensans);
+}
+
