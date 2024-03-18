@@ -141,6 +141,10 @@ img {
     margin: 0;
 }
 
+.certifications a{
+  text-decoration: underline;
+}
+
 .certifications ul {
   padding-left: 15px;
   margin-top: 0%;
