@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iphone Resellers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.8/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <style>
+        .carousel-item {
+            transition: opacity 0.5s;
+        }
+        .carousel-item.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="bg-white shadow">
+        <div class="container mx-auto flex items-center py-4 justify-between px-4">
+            <div class="logo">
+                <a href="#" class="text-xl font-bold flex"><i class="fi-xnsuxl-apple"></i>Resellers</a>
+            </div>
+
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="#" class="hover:text-lg hover:ease-in-out hover:duration-300">Home</a>
+                <a href="#" class="hover:text-lg hover:ease-in-out hover:duration-300">About Us</a>
+                <a href="#" class="hover:text-lg hover:ease-in-out hover:duration-300">Contact Us</a>
+                <a href="#" class="px-3 py-1 border border-gray-500 hover:bg-gray-100 rounded"><i
+                        class="fi-xnluhl-shopping-cart"></i></a>
+                <button class="px-3 py-1 rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+            </div>
+
+            <button @click="searchOpen = !searchOpen" class="lg:hidden block">
+                <i class="fi-xnsuhl-search"></i>
+            </button>
+
+            <div id="searchBar" class="hidden">
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <div class="absolute top-0 left-0 w-full h-full bg-gray-900/50 flex items-center justify-center fixed lg:hidden"
+                x-show="menuOpen" @click.away="menuOpen = false" style="z-index: 1000;">
+                <ul class="text-center space-y-6 text-lg text-white">
+                    <li><a href="#" class="block py-3 hover:bg-gray-800">Home</a></li>
+                    <li><a href="#" class="block py-3 hover:bg-gray-800">About Us</a></li>
+                    <li><a href="#" class="block py-3 hover:bg-gray-800">Contact Us</a></li>
+                    <li><a href="#" class="block py-3 hover:bg-gray-800">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative overflow-hidden">
+        <div class="carousel w-screen">
+            <div class="carousel-item relative">
+                <img src="://via.placeholhttpsder.com/1920x1080" alt="Slide 1" class="w-full h-auto">
+                <div class="absolute inset-0 flex items-center justify-center text-white text-xl font-bold">We will be your next upgrade.</div>
+            </div>
+            <div class="carousel-item relative hidden">
+                <img src="https://via.placeholder.com/1920x1080" alt="Slide 2" class="w-full h-auto">
+                <div class="absolute inset-0 flex items-center justify-center text-white text-xl font-bold">We will be your next upgrade.</div>
+            </div>
+            <div class="carousel-item relative hidden">
+                <img src="https://via.placeholder.com/1920x1080" alt="Slide 3" class="w-full h-auto">
+                <div class="absolute inset-0 flex items-center justify-center text-white text-xl font-bold">We will be your next upgrade.</div>
+            </div>
+            <div class="carousel-item relative hidden">
+                <img src="https://via.placeholder.com/1920x1080" alt="Slide 4" class="w-full h-auto">
+                <div class="absolute inset-0 flex items-center justify-center text-white text-xl font-bold">We will be your next upgrade.</div>
+            </div>
+        </div>
+        <div class="absolute inset-y-0 left-0 flex items-center justify-center">
+            <button id="prevBtn" class="bg-gray-800 text-white p-2 rounded-l-md"><</button>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center justify-center">
+            <button id="nextBtn" class="bg-gray-800 text-white p-2 rounded-r-md">></button>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x300" alt="Card Image" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Card Title 1</h2>
+                    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel ex vel justo posuere suscipit.</p>
+                    <a href="#" class="block mt-2 text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x300" alt="Card Image" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Card Title 2</h2>
+                    <p class="text-gray-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    <a href="#" class="block mt-2 text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://via.placeholder.com/400x300" alt="Card Image" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Card Title 3</h2>
+                    <p class="text-gray-600">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.</p>
+                    <a href="#" class="block mt-2 text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='bg-black py-6'>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-white mx-32 ">
+
+            <!-- 1st Column -->
+            <div class="md:mx-auto my-10">
+                <img src="../Assets/axiobridge.png" alt='' class="mb-4 h-36 md:ml-20" />
+                <p class="text-xs md:text-lg">4,5 Block L, Abdul Haque Rd</p>
+                <p class="mb-10 text-xs md:text-lg">Lahore, Pakistan</p>
+                <p>Phone: +92 309 0855 822</p>
+                <p>Email: info@appleresellers.com</p>
+            </div>
+
+
+            <!-- 2nd Column -->
+            <div class="mx-auto my-10">
+                <h2 class="text-lg md:text-xl md:tracking-widest font-semibold mb-2 md:pt-10">Dummy Headings</h2>
+                <ul class="list-disc ml-4 leading-8">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Clients</li>
+                    <li>Contact</li>
+                    <li>T&T</li>
+                </ul>
+            </div>
+
+
+            <!-- 3rd Column -->
+            <div class="mx-auto my-10">
+                <h2 class="text-lg md:text-xl md:tracking-widest font-semibold mb-2 md:pt-10">Dummy Services</h2>
+                <ul class="list-disc ml-4 leading-7">
+                    <li>hvkhvl</li>
+                    <li>swdfceceeef</li>
+                    <li>svfervervrtvgrv</li>
+                    <li>sd sadcevfcevg</li>
+                    <li>d cecewcew</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#181725]">
+        <p class="text-center text-white py-6">Copyright © Apple resellers | All Rights Reserveds</p>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.carousel-item');
+    
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('hidden');
+                    } else {
+                        slide.classList.add('hidden');
+                    }
+                });
+            };
+    
+            const nextSlide = () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            };
+    
+            const prevSlide = () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
+            };
+    
+            const intervalId = setInterval(nextSlide, 3000);
+    
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                clearInterval(intervalId);
+                nextSlide();
+            });
+    
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                clearInterval(intervalId);
+                prevSlide();
+            });
+        });
+    </script>
+
+
+
+    <script>
+        let menuOpen = false;
+        let searchOpen = false;
+        document.querySelector('.lg:hidden.block').addEventListener('click', function () {
+            searchOpen = !searchOpen;
+            document.getElementById('searchBar').style.display = searchOpen ? 'block' : 'none';
+        });
+    </script>
+    
+</body>
+
+</html>
