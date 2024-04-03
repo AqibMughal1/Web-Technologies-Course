@@ -45,13 +45,12 @@
         <div class="bg-[#141414]  border border-gray-400">
             <div class="mx-56 flex">
                 <h1 class="text-[#e85e08] text-4xl font-bold  my-4">SOUNDS</h1>
-                <ul class="flex space-x-8 text-[#a5a6a8] mx-5 my-6">
+                <ul class="flex space-x-8 text-[#a5a6a8] mx-5 my-6" id="navList">
                     <li class="flex"><i class="fi-xwsuxl-home pr-2"></i> Home</li>
                     <li class="flex"><i class="fi-xnsuxl-music pr-2"></i> Music</li>
                     <li class="flex"><i class="fi-xnluxl-male pr-2"></i> Podcasts</li>
                     <li class="flex"><i class="fi-xwluhl-address-card-wide pr-2"></i> My Sounds</li>
                 </ul>
-
             </div>
         </div>
     </nav>
@@ -88,10 +87,18 @@
           
     </div>
     <div class="bg-black">
-        <div class="mx-56 flex justify-center items-center h-56">
-            <img class="h-full" src="https://m.files.bbci.co.uk/modules/bbc-morph-news-waf-page-meta/5.3.0/bbc_news_logo.png" alt="">
+        <div class="mx-56 flex justify-center items-center h-56" id="imageContainer">
+            <img class="h-full" id="clickableImage" src="https://m.files.bbci.co.uk/modules/bbc-morph-news-waf-page-meta/5.3.0/bbc_news_logo.png" alt="">
         </div>
     </div>
+    <script>
+        document.getElementById('clickableImage').addEventListener('click', function() {
+    var navList = document.getElementById('navList');
+    var listItem = document.createElement('li');
+    listItem.innerHTML = '<i class="fi-xwsuxl-music pr-2"></i> New Item';
+    navList.appendChild(listItem);
+});
+    </script>
     
 </body>
 
