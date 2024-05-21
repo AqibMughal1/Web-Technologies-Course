@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Resellers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.8/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body>
-    <%- include('./partials/navbar') %>
+    <%- include('../partials/navbar') %>
     <%- body %>
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
+
+    <script src="/public/scripts/navbar.js"></script>
+    <script src="/public/scripts/hero.js"></script>
 </body>
 </html>
