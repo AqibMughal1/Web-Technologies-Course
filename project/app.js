@@ -6,6 +6,8 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.urlencoded({extended: true}));
+
 const dbUrl = 'mongodb://localhost:27017/apple-resellers';
 
 mongoose.connect(dbUrl, {}).then(() => {
