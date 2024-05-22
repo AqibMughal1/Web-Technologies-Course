@@ -9,7 +9,6 @@ const app = express();
 
 app.use(express.urlencoded({extended: true}));
 
-
 const dbUrl = 'mongodb://localhost:27017/apple-resellers';
 
 mongoose.connect(dbUrl, {}).then(() => {
@@ -19,6 +18,7 @@ mongoose.connect(dbUrl, {}).then(() => {
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');

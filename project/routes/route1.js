@@ -83,4 +83,9 @@ router.put('/products/:id', async (req, res) => {
   }
 });
 
+router.delete('/product/:id', async (req, res) => {
+  const product = await Product.findByIdAndDelete(req.params.id);
+  res.redirect('/')
+});
+
 module.exports = router;
