@@ -26,7 +26,7 @@ router.get('/products', async (req, res) => {
 });
 
 // Render product description page
-router.get('/productDescription/:id', async (req, res) => {
+router.get('/product/:id', async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
     res.render('product/productDescription', { product });
@@ -64,6 +64,22 @@ router.post('/products', async (req, res) => {
   } catch (e) {
     console.log(e);
     res.send('Error adding product');
+  }
+});
+
+router.get('/product/:id/edit', async (req, res) => {
+  const product = await Product.findById(req.params.id);
+  res.render("product/edit", {product});
+});
+
+router.put('/products/:id', async (req, res) => {
+  try {
+    const { productType, model, variant, ram, storage, specs, modelYear, chip, screenSize, mainImage, additionalImages, price } = req.body;
+    const updatedProduct = await Product.findByIdAndUpdate(req.params.id, { productType, model, variant, ram, storage, specs, modelYear, chip, screenSize, mainImage, additionalImages, price }, { new: true });
+    res.redirect(`/products/${updatedProduct._id}`);
+  } catch (error) {
+    console.log(error);
+    res.send('Error updating product');
   }
 });
 

@@ -3,10 +3,12 @@ const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const route1 = require('./routes/route1');
 const path = require('path');
-
+const methodOverride = require('method-override');
 const app = express();
 
+
 app.use(express.urlencoded({extended: true}));
+
 
 const dbUrl = 'mongodb://localhost:27017/apple-resellers';
 

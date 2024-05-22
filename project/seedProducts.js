@@ -17,6 +17,7 @@ const seedProducts = [
   // Smartphones
   {
     productType: "smartphone",
+    price: 250,
     model: "iPhone 14 Pro",
     variant: "128GB/Space Gray",
     ram: 6,
@@ -29,6 +30,7 @@ const seedProducts = [
   },
   {
     productType: "smartphone",
+    price: 250,
     model: "iPhone 13",
     variant: "128GB/Blue",
     ram: 4,
@@ -41,6 +43,7 @@ const seedProducts = [
   },
   {
     productType: "smartphone",
+    price: 250,
     model: "iPhone SE",
     variant: "64GB/Black",
     ram: 3,
@@ -53,6 +56,7 @@ const seedProducts = [
   },
   {
     productType: "smartphone",
+    price: 250,
     model: "iPhone 12",
     variant: "128GB/White",
     ram: 4,
@@ -65,6 +69,7 @@ const seedProducts = [
   },
   {
     productType: "smartphone",
+    price: 250,
     model: "iPhone 11",
     variant: "64GB/Green",
     ram: 4,
@@ -77,6 +82,7 @@ const seedProducts = [
   },
   {
     productType: "smartphone",
+    price: 250,
     model: "iPhone XR",
     variant: "64GB/Red",
     ram: 3,
@@ -90,6 +96,7 @@ const seedProducts = [
   // Laptops
   {
     productType: "laptop",
+    price: 250,
     model: "MacBook Pro",
     variant: "16GB/512GB SSD",
     ram: 16,
@@ -102,6 +109,7 @@ const seedProducts = [
   },
   {
     productType: "laptop",
+    price: 250,
     model: "MacBook Air",
     variant: "8GB/256GB SSD",
     ram: 8,
@@ -114,6 +122,7 @@ const seedProducts = [
   },
   {
     productType: "laptop",
+    price: 250,
     model: "MacBook Pro",
     variant: "16GB/1TB SSD",
     ram: 16,
@@ -126,6 +135,7 @@ const seedProducts = [
   },
   {
     productType: "laptop",
+    price: 250,
     model: "MacBook Air",
     variant: "16GB/512GB SSD",
     ram: 16,
@@ -138,6 +148,7 @@ const seedProducts = [
   },
   {
     productType: "laptop",
+    price: 250,
     model: "MacBook",
     variant: "8GB/256GB SSD",
     ram: 8,
@@ -151,6 +162,7 @@ const seedProducts = [
   // Desktops
   {
     productType: "desktop",
+    price: 250,
     model: "iMac",
     variant: "8GB/256GB SSD",
     ram: 8,
@@ -163,6 +175,7 @@ const seedProducts = [
   },
   {
     productType: "desktop",
+    price: 250,
     model: "Mac Mini",
     variant: "8GB/256GB SSD",
     ram: 8,
@@ -175,6 +188,7 @@ const seedProducts = [
   },
   {
     productType: "desktop",
+    price: 250,
     model: "iMac Pro",
     variant: "32GB/1TB SSD",
     ram: 32,
@@ -187,6 +201,7 @@ const seedProducts = [
   },
   {
     productType: "desktop",
+    price: 250,
     model: "iMac",
     variant: "16GB/512GB SSD",
     ram: 16,
@@ -199,6 +214,7 @@ const seedProducts = [
   },
   {
     productType: "desktop",
+    price: 250,
     model: "Mac Pro",
     variant: "32GB/1TB SSD",
     ram: 32,
@@ -212,6 +228,7 @@ const seedProducts = [
   // Tablets
   {
     productType: "tablet",
+    price: 250,
     model: "iPad Pro",
     variant: "128GB/Space Gray",
     ram: 8,
@@ -224,6 +241,7 @@ const seedProducts = [
   },
   {
     productType: "tablet",
+    price: 250,
     model: "iPad Air",
     variant: "64GB/Rose Gold",
     ram: 4,
@@ -236,6 +254,7 @@ const seedProducts = [
   },
   {
     productType: "tablet",
+    price: 250,
     model: "iPad",
     variant: "32GB/Silver",
     ram: 3,
@@ -248,6 +267,7 @@ const seedProducts = [
   },
   {
     productType: "tablet",
+    price: 250,
     model: "iPad Mini",
     variant: "64GB/Gold",
     ram: 3,
@@ -260,6 +280,7 @@ const seedProducts = [
   },
   {
     productType: "tablet",
+    price: 250,
     model: "iPad Pro",
     variant: "256GB/Silver",
     ram: 8,
@@ -273,6 +294,7 @@ const seedProducts = [
   // Wearables
   {
     productType: "wearable",
+    price: 250,
     model: "Apple Watch Series 7",
     variant: "45mm/Space Gray",
     ram: 1,
@@ -285,6 +307,7 @@ const seedProducts = [
   },
   {
     productType: "wearable",
+    price: 250,
     model: "Apple Watch SE",
     variant: "44mm/Silver",
     ram: 1,
@@ -297,6 +320,7 @@ const seedProducts = [
   },
   {
     productType: "wearable",
+    price: 250,
     model: "Apple Watch Series 6",
     variant: "40mm/Gold",
     ram: 1,
@@ -309,6 +333,7 @@ const seedProducts = [
   },
   {
     productType: "wearable",
+    price: 250,
     model: "Apple Watch Series 5",
     variant: "44mm/Space Black",
     ram: 1,
@@ -321,6 +346,7 @@ const seedProducts = [
   },
   {
     productType: "wearable",
+    price: 250,
     model: "Apple Watch Series 3",
     variant: "38mm/White",
     ram: 0.75,
@@ -334,6 +360,7 @@ const seedProducts = [
   // Accessories
   {
     productType: "accessory",
+    price: 250,
     model: "AirPods Pro",
     variant: "White",
     ram: 0,
@@ -346,6 +373,7 @@ const seedProducts = [
   },
   {
     productType: "accessory",
+    price: 250,
     model: "HomePod mini",
     variant: "Space Gray",
     ram: 0,
@@ -358,6 +386,7 @@ const seedProducts = [
   },
   {
     productType: "accessory",
+    price: 250,
     model: "Apple TV 4K",
     variant: "32GB",
     ram: 3,
@@ -370,6 +399,7 @@ const seedProducts = [
   },
   {
     productType: "accessory",
+    price: 250,
     model: "Magic Keyboard",
     variant: "White",
     ram: 0,
@@ -382,6 +412,7 @@ const seedProducts = [
   },
   {
     productType: "accessory",
+    price: 250,
     model: "AirPods Max",
     variant: "Space Gray",
     ram: 0,

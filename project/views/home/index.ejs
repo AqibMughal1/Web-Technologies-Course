@@ -47,7 +47,7 @@
         <h1 class="text-4xl font-bold text-gray-800 mb-10 transition duration-500 transform hover:text-blue-500">Our Best Selling Products</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <% featuredProducts.forEach(product => { %>
-            <a href="/productDescription/<%= product._id %>">
+            <a href="/product/<%= product._id %>">
               <div class="bg-white shadow-lg rounded-lg p-6 transition duration-500 transform hover:scale-105">
                 <img src="<%= product.image %>" alt="<%= product.model %>" class="w-full mb-4">
                 <h2 class="text-xl font-semibold"><%= product.model %></h2>
