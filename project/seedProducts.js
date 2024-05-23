@@ -17,7 +17,7 @@ const seedProducts = [
   // Smartphones
   {
     productType: "smartphone",
-    price: 250,
+    price: 999,
     model: "iPhone 14 Pro",
     variant: "128GB/Space Gray",
     ram: 6,
@@ -30,7 +30,7 @@ const seedProducts = [
   },
   {
     productType: "smartphone",
-    price: 250,
+    price: 799,
     model: "iPhone 13",
     variant: "128GB/Blue",
     ram: 4,
@@ -43,7 +43,7 @@ const seedProducts = [
   },
   {
     productType: "smartphone",
-    price: 250,
+    price: 499,
     model: "iPhone SE",
     variant: "64GB/Black",
     ram: 3,
@@ -54,49 +54,10 @@ const seedProducts = [
     screenSize: 4.7,
     image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
   },
-  {
-    productType: "smartphone",
-    price: 250,
-    model: "iPhone 12",
-    variant: "128GB/White",
-    ram: 4,
-    storage: 128,
-    specs: ["5G", "Super Retina XDR display"],
-    modelYear: 2020,
-    chip: "A14 Bionic",
-    screenSize: 6.1,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "smartphone",
-    price: 250,
-    model: "iPhone 11",
-    variant: "64GB/Green",
-    ram: 4,
-    storage: 64,
-    specs: ["4G LTE", "Liquid Retina HD display"],
-    modelYear: 2019,
-    chip: "A13 Bionic",
-    screenSize: 6.1,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "smartphone",
-    price: 250,
-    model: "iPhone XR",
-    variant: "64GB/Red",
-    ram: 3,
-    storage: 64,
-    specs: ["4G LTE", "Liquid Retina HD display"],
-    modelYear: 2018,
-    chip: "A12 Bionic",
-    screenSize: 6.1,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
   // Laptops
   {
     productType: "laptop",
-    price: 250,
+    price: 1999,
     model: "MacBook Pro",
     variant: "16GB/512GB SSD",
     ram: 16,
@@ -109,7 +70,7 @@ const seedProducts = [
   },
   {
     productType: "laptop",
-    price: 250,
+    price: 999,
     model: "MacBook Air",
     variant: "8GB/256GB SSD",
     ram: 8,
@@ -120,49 +81,10 @@ const seedProducts = [
     screenSize: 13.3,
     image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
   },
-  {
-    productType: "laptop",
-    price: 250,
-    model: "MacBook Pro",
-    variant: "16GB/1TB SSD",
-    ram: 16,
-    storage: 1024,
-    specs: ["M1 Max chip", "Liquid Retina XDR display"],
-    modelYear: 2021,
-    chip: "M1 Max",
-    screenSize: 16,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "laptop",
-    price: 250,
-    model: "MacBook Air",
-    variant: "16GB/512GB SSD",
-    ram: 16,
-    storage: 512,
-    specs: ["M2 chip", "Liquid Retina display"],
-    modelYear: 2022,
-    chip: "M2",
-    screenSize: 13.6,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "laptop",
-    price: 250,
-    model: "MacBook",
-    variant: "8GB/256GB SSD",
-    ram: 8,
-    storage: 256,
-    specs: ["Intel Core m3", "Retina display"],
-    modelYear: 2017,
-    chip: "Intel Core m3",
-    screenSize: 12,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
   // Desktops
   {
     productType: "desktop",
-    price: 250,
+    price: 1299,
     model: "iMac",
     variant: "8GB/256GB SSD",
     ram: 8,
@@ -175,7 +97,7 @@ const seedProducts = [
   },
   {
     productType: "desktop",
-    price: 250,
+    price: 699,
     model: "Mac Mini",
     variant: "8GB/256GB SSD",
     ram: 8,
@@ -186,49 +108,10 @@ const seedProducts = [
     screenSize: 0, // No display
     image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
   },
-  {
-    productType: "desktop",
-    price: 250,
-    model: "iMac Pro",
-    variant: "32GB/1TB SSD",
-    ram: 32,
-    storage: 1024,
-    specs: ["Xeon W processor", "5K Retina display"],
-    modelYear: 2017,
-    chip: "Intel Xeon W",
-    screenSize: 27,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "desktop",
-    price: 250,
-    model: "iMac",
-    variant: "16GB/512GB SSD",
-    ram: 16,
-    storage: 512,
-    specs: ["Intel Core i9", "5K Retina display"],
-    modelYear: 2019,
-    chip: "Intel Core i9",
-    screenSize: 27,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "desktop",
-    price: 250,
-    model: "Mac Pro",
-    variant: "32GB/1TB SSD",
-    ram: 32,
-    storage: 1024,
-    specs: ["Intel Xeon W", "Modular design"],
-    modelYear: 2019,
-    chip: "Intel Xeon W",
-    screenSize: 0, // No display
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
   // Tablets
   {
     productType: "tablet",
-    price: 250,
+    price: 1099,
     model: "iPad Pro",
     variant: "128GB/Space Gray",
     ram: 8,
@@ -241,7 +124,7 @@ const seedProducts = [
   },
   {
     productType: "tablet",
-    price: 250,
+    price: 599,
     model: "iPad Air",
     variant: "64GB/Rose Gold",
     ram: 4,
@@ -252,49 +135,10 @@ const seedProducts = [
     screenSize: 10.9,
     image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
   },
-  {
-    productType: "tablet",
-    price: 250,
-    model: "iPad",
-    variant: "32GB/Silver",
-    ram: 3,
-    storage: 32,
-    specs: ["A12 Bionic chip", "Retina display"],
-    modelYear: 2019,
-    chip: "A12 Bionic",
-    screenSize: 10.2,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "tablet",
-    price: 250,
-    model: "iPad Mini",
-    variant: "64GB/Gold",
-    ram: 3,
-    storage: 64,
-    specs: ["A12 Bionic chip", "Retina display"],
-    modelYear: 2019,
-    chip: "A12 Bionic",
-    screenSize: 7.9,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "tablet",
-    price: 250,
-    model: "iPad Pro",
-    variant: "256GB/Silver",
-    ram: 8,
-    storage: 256,
-    specs: ["M1 chip", "Liquid Retina display"],
-    modelYear: 2021,
-    chip: "M1",
-    screenSize: 11,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
   // Wearables
   {
     productType: "wearable",
-    price: 250,
+    price: 399,
     model: "Apple Watch Series 7",
     variant: "45mm/Space Gray",
     ram: 1,
@@ -307,7 +151,7 @@ const seedProducts = [
   },
   {
     productType: "wearable",
-    price: 250,
+    price: 279,
     model: "Apple Watch SE",
     variant: "44mm/Silver",
     ram: 1,
@@ -318,49 +162,10 @@ const seedProducts = [
     screenSize: 1.78,
     image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
   },
-  {
-    productType: "wearable",
-    price: 250,
-    model: "Apple Watch Series 6",
-    variant: "40mm/Gold",
-    ram: 1,
-    storage: 32,
-    specs: ["GPS", "Always-On Retina display"],
-    modelYear: 2020,
-    chip: "S6",
-    screenSize: 1.73,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "wearable",
-    price: 250,
-    model: "Apple Watch Series 5",
-    variant: "44mm/Space Black",
-    ram: 1,
-    storage: 32,
-    specs: ["GPS", "Always-On Retina display"],
-    modelYear: 2019,
-    chip: "S5",
-    screenSize: 1.78,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "wearable",
-    price: 250,
-    model: "Apple Watch Series 3",
-    variant: "38mm/White",
-    ram: 0.75,
-    storage: 8,
-    specs: ["GPS", "Retina display"],
-    modelYear: 2017,
-    chip: "S3",
-    screenSize: 1.65,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
   // Accessories
   {
     productType: "accessory",
-    price: 250,
+    price: 249,
     model: "AirPods Pro",
     variant: "White",
     ram: 0,
@@ -373,7 +178,7 @@ const seedProducts = [
   },
   {
     productType: "accessory",
-    price: 250,
+    price: 99,
     model: "HomePod mini",
     variant: "Space Gray",
     ram: 0,
@@ -383,58 +188,24 @@ const seedProducts = [
     chip: "S5",
     screenSize: 0,
     image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "accessory",
-    price: 250,
-    model: "Apple TV 4K",
-    variant: "32GB",
-    ram: 3,
-    storage: 32,
-    specs: ["A12 Bionic chip", "Dolby Vision"],
-    modelYear: 2021,
-    chip: "A12 Bionic",
-    screenSize: 0,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "accessory",
-    price: 250,
-    model: "Magic Keyboard",
-    variant: "White",
-    ram: 0,
-    storage: 0,
-    specs: ["Backlit keys", "Multi-Touch trackpad"],
-    modelYear: 2020,
-    chip: "None",
-    screenSize: 0,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
-  },
-  {
-    productType: "accessory",
-    price: 250,
-    model: "AirPods Max",
-    variant: "Space Gray",
-    ram: 0,
-    storage: 0,
-    specs: ["Active Noise Cancellation", "Spatial audio"],
-    modelYear: 2020,
-    chip: "H1",
-    screenSize: 0,
-    image: "https://fakeimg.pl/600x400?text=Item+Placeholder"
   }
 ];
 
-Product.deleteMany({})
-  .then(() => {
-    return Product.insertMany(seedProducts);
-  })
-  .then(res => {
-    console.log(res);
-  })
-  .catch(err => {
-    console.log(err);
-  })
-  .finally(() => {
+async function seed() {
+  try {
+    for (let product of seedProducts) {
+      await Product.findOneAndUpdate(
+        { model: product.model, variant: product.variant },
+        product,
+        { upsert: true, new: true }
+      );
+    }
+    console.log('Products seeded successfully');
+  } catch (err) {
+    console.error('Error seeding products:', err);
+  } finally {
     mongoose.connection.close();
-  });
+  }
+}
+
+seed();

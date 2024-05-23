@@ -4,6 +4,8 @@ const ejsMate = require('ejs-mate');
 const route1 = require('./routes/route1');
 const path = require('path');
 const methodOverride = require('method-override');
+const MongoStore = require('connect-mongo');
+const session = require('express-session');
 const app = express();
 
 
@@ -20,9 +22,32 @@ mongoose.connect(dbUrl, {}).then(() => {
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
+app.use(session({
+  secret: 'yourSecretKey', // You should use a strong secret key
+  resave: false,
+  saveUninitialized: true,
+  store: MongoStore.create({ mongoUrl: dbUrl }),
+  cookie: {
+    httpOnly: true,
+    maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+  }
+}));
+
+
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+app.use((req, res, next) => {
+  res.locals.currentUser = req.session.userId;
+  next();
+});
+
+
+
+const userRoutes = require('./routes/users');
+app.use('/', userRoutes);
+
 
 app.use('/', route1);
 
