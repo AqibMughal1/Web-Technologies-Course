@@ -1,6 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const Product = require('../models/product');
+const session = require('express-session');
+
+
+function requireAuth(req, res, next) {
+  if (req.session.userId) {
+    next();
+  } else {
+    res.redirect('/login');
+  }
+};
 
 
 // Render home page
