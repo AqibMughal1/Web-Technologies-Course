@@ -1,0 +1,42 @@
+<%- layout('./layout/wrapper') %>
+<main>
+    <div class="container-fluid pt-5">
+        <div class="row align-items-center justify-content-center my-5">
+            <div class="col-7 mt-5">
+                <h1 class="display-2 fw-bold text-center head-font my-5 text-warning">
+                    WE ARE JUST A TEXT AWAY
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center pb-20" style="min-height: 60vh;">
+        <div class="col-md-6 col-12 border p-md-5 p-3 rounded">
+            <form action="/contact" method="POST">
+                <div class="text-center fs-3 mb-4">Contact Us</div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="first-name" class="form-label">First name</label>
+                        <input autocomplete="off" type="text" class="form-control" placeholder="First name" aria-label="First name" id="first-name" name="fname" required>
+                        <div id="fn-validator" class="form-text text-danger d-none"></div>
+                    </div>
+                    <div class="col">
+                        <label for="last-name" class="form-label">Last Name</label>
+                        <input autocomplete="off" type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="last-name" name="lname" required>
+                        <div id="ln-validator" class="form-text text-danger d-none"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input autocomplete="off" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="example@xyz.com" name="email" required>
+                    <div id="email-validator" class="form-text text-danger d-none"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="query" class="form-label">Description</label>
+                    <textarea class="form-control" id="query" placeholder="write here" name="query" rows="5" required></textarea>
+                    <div id="q-validator" class="form-text text-danger d-none"></div>
+                </div>
+                <button type="submit" class="btn btn-dark" id="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+</main>

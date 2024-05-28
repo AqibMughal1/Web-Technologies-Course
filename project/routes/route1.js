@@ -51,6 +51,11 @@ router.get('/products/new', (req, res) => {
   res.render('product/new');
 });
 
+
+router.get('/contactus', (req, res) => {
+  res.render('contactUs/contactus');
+});
+
 // Handle new product form submission
 router.post('/products', async (req, res) => {
   try {
