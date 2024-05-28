@@ -56,6 +56,10 @@ router.get('/contactus', (req, res) => {
   res.render('contactUs/contactus');
 });
 
+router.get('/aboutus', (req, res) => {
+  res.render('contactUs/aboutus');
+});
+
 // Handle new product form submission
 router.post('/products', async (req, res) => {
   try {
