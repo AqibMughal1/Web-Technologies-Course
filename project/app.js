@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use(session({
-  secret: 'yourSecretKey', // You should use a strong secret key
+  secret: 'yourSecretKey', 
   resave: false,
   saveUninitialized: true,
   store: MongoStore.create({ mongoUrl: dbUrl }),

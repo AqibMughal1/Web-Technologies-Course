@@ -3,7 +3,6 @@ const router = express.Router();
 const Product = require('../models/product');
 const session = require('express-session');
 
-
 function requireAuth(req, res, next) {
   if (req.session.userId) {
     next();
@@ -11,7 +10,6 @@ function requireAuth(req, res, next) {
     res.redirect('/login');
   }
 };
-
 
 // Render home page
 router.get('/', async (req, res) => {
@@ -24,16 +22,40 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Render products page
+// Render products page with pagination and search
 router.get('/products', async (req, res) => {
   try {
-    const products = await Product.find({});
-    res.render('product/products', { products });
+    const page = Math.max(parseInt(req.query.page) || 1, 1);
+    const limit = 12;
+    const skip = (page - 1) * limit;
+    const searchQuery = req.query.search || '';
+    
+    // Build the query object
+    const query = searchQuery
+      ? { model: new RegExp(searchQuery, 'i') } // Case-insensitive search by model
+      : {};
+
+    // Fetch the products for the current page with search
+    const [products, totalProducts] = await Promise.all([
+      Product.find(query).skip(skip).limit(limit),
+      Product.countDocuments(query)
+    ]);
+
+    // Calculate the total number of pages
+    const totalPages = Math.ceil(totalProducts / limit);
+
+    res.render('product/products', {
+      products: products,
+      currentPage: page,
+      totalPages: totalPages,
+      searchQuery: searchQuery
+    });
   } catch (e) {
     console.log(e);
     res.send('Error fetching products');
   }
 });
+
 
 // Render product description page
 router.get('/product/:id', async (req, res) => {
@@ -50,7 +72,6 @@ router.get('/product/:id', async (req, res) => {
 router.get('/products/new', (req, res) => {
   res.render('product/new');
 });
-
 
 router.get('/contactus', (req, res) => {
   res.render('contactUs/contactus');
@@ -95,7 +116,7 @@ router.put('/products/:id', async (req, res) => {
   try {
     const { productType, model, variant, ram, storage, specs, modelYear, chip, screenSize, mainImage, additionalImages, price } = req.body;
     const updatedProduct = await Product.findByIdAndUpdate(req.params.id, { productType, model, variant, ram, storage, specs, modelYear, chip, screenSize, mainImage, additionalImages, price }, { new: true });
-    res.redirect(`/products/${updatedProduct._id}`);
+    res.redirect(`/product/${updatedProduct._id}`);
   } catch (error) {
     console.log(error);
     res.send('Error updating product');

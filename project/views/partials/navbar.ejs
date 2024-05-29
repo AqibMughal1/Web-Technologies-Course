@@ -4,19 +4,21 @@
             <a href="/" class="text-xl font-bold flex"><i class="fi-xnsuxl-apple"></i>Resellers</a>
         </div>
 
+        <div id="search-bar" class="hidden lg:block">
+            <form action="/products" method="get" class="flex">
+                <input type="text" name="search" class="border p-2" placeholder="Search products...">
+                <button type="submit" class="btn btn-primary ml-2">Search</button>
+            </form>
+        </div>
+
         <div class="hidden lg:flex items-center space-x-6">
             <a href="/" class="hover:text-lg hover:ease-in-out hover:duration-300">Home</a>
             <a href="/aboutus" class="hover:text-lg hover:ease-in-out hover:duration-300">About Us</a>
             <a href="/contactus" class="hover:text-lg hover:ease-in-out hover:duration-300">Contact Us</a>
-            <a href="#" class="px-3 py-1 border border-gray-500 hover:bg-gray-100 rounded"><i
-                    class="fi-xnluhl-shopping-cart"></i></a>
-            <button class="px-3 py-1 rounded">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-            </button>
+            <a href="#" class="px-3 py-1 border border-gray-500 hover:bg-gray-100 rounded">
+                <i class="fi-xnluhl-shopping-cart"></i>
+            </a>
+            
             <% if (!currentUser) { %>
             <a href="/login" class="btn btn-primary">Login</a>
             <% } else { %>
@@ -26,20 +28,18 @@
             <% } %>
         </div>
 
-        <button @click="searchOpen = !searchOpen" class="lg:hidden block">
+        <button id="menu-toggle" class="lg:hidden block">
             <i class="fi-xnsuhl-search"></i>
         </button>
 
-        <div id="searchBar" class="hidden">
-            <input type="text" placeholder="Search...">
-        </div>
+        
 
-        <div class="absolute top-0 left-0 w-full h-full bg-gray-900/50 flex items-center justify-center fixed lg:hidden"
-            x-show="menuOpen" @click.away="menuOpen = false" style="z-index: 1000;">
+        <div id="mobile-menu" class="absolute top-0 left-0 w-full h-full bg-gray-900/50 flex items-center justify-center fixed lg:hidden hidden"
+            style="z-index: 1000;">
             <ul class="text-center space-y-6 text-lg text-white">
-                <li><a href="#" class="block py-3 hover:bg-gray-800">Home</a></li>
-                <li><a href="#" class="block py-3 hover:bg-gray-800">About Us</a></li>
-                <li><a href="#" class="block py-3 hover:bg-gray-800">Contact Us</a></li>
+                <li><a href="/" class="block py-3 hover:bg-gray-800">Home</a></li>
+                <li><a href="/aboutus" class="block py-3 hover:bg-gray-800">About Us</a></li>
+                <li><a href="/contactus" class="block py-3 hover:bg-gray-800">Contact Us</a></li>
                 <li><a href="#" class="block py-3 hover:bg-gray-800">Cart</a></li>
             </ul>
         </div>
