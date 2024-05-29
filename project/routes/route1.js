@@ -56,7 +56,6 @@ router.get('/products', async (req, res) => {
   }
 });
 
-
 // Render product description page
 router.get('/product/:id', async (req, res) => {
   try {
