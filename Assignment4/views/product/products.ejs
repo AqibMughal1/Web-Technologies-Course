@@ -1,0 +1,34 @@
+<%- layout('./layout/wrapper') %>
+<main>
+    <section class="text-center py-10">
+        <h1 class="text-4xl font-bold text-gray-800 mb-10 transition duration-500 transform hover:text-blue-500">Let's Take a Dive into Our Finest Products</h1>
+
+        <a href="/products/new"><button class="btn btn-primary mb-16">Add New Product</button></a>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <% products.forEach(product => { %>
+                <a href="/product/<%= product._id %>">
+                    <div class="bg-white shadow-lg rounded-lg p-6 transition duration-500 transform hover:scale-105">
+                        <img src="<%= product.image %>" alt="<%= product.model %>" class="w-full mb-4">
+                        <h2 class="text-xl font-semibold"><%= product.model %></h2>
+                        <h2 class="text-xl font-semibold">$<%= product.price %></h2>
+                        <p class="text-gray-600"><%= product.variant %> - <%= product.specs.join(', ') %></p>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="mt-10">
+            <% if (currentPage > 1) { %>
+                <a href="/products?page=<%= currentPage - 1 %>" class="btn btn-secondary">Previous</a>
+            <% } %>
+            <% for (let i = 1; i <= totalPages; i++) { %>
+                <a href="/products?page=<%= i %>" class="btn <%= i === currentPage ? 'btn-primary' : 'btn-secondary' %>"><%= i %></a>
+            <% } %>
+            <% if (currentPage < totalPages) { %>
+                <a href="/products?page=<%= currentPage + 1 %>" class="btn btn-secondary">Next</a>
+            <% } %>
+        </div>
+    </section>
+</main>
