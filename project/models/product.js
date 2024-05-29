@@ -12,7 +12,8 @@ const productSchema = new mongoose.Schema({
   chip: String,
   screenSize: Number,
   image: { type: String, required: true }, // Main image URL
-  additionalImages: [String] // Additional images URLs, optional
+  additionalImages: [String], // Additional images URLs, optional
+  isFeatured: { type: Boolean, default: false }
 });
 
 const Product = mongoose.model('Product', productSchema);
