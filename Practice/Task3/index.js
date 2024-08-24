@@ -15,8 +15,8 @@ addColor('Red');
 printColors();
 addColor('Blue');
 printColors();
-addColor('Green');
+addColor('Yellow');
 printColors();
-addColor('Pink');
+addColor('Green');
 printColors();
 
